@@ -15,18 +15,18 @@ function generateId () {
 }
 
 function Todo () {
-  const [todos, setTodos] = React.useState([])
-  const [input, setInput] = React.useState('')
+  const [todos, setTodos] = React.useState([]);
+  const [input, setInput] = React.useState('');
 
   const handleSubmit = () => {
     setTodos((todos) => todos.concat({
       text: input,
-      id: generateId()
-    }))
-    setInput('')
+      id: generateId(),
+    }));
+    setInput('');
   }
 
-  const removeTodo = (id) => setTodos((todos) => todos.filter((t) => t.id !== id))
+  const removeTodo = (id) => setTodos((todos) => todos.filter((t) => t.id !== id));
 
   return (
     <div>
