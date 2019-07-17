@@ -9,7 +9,7 @@ import './styles.css'
   the useState Hook.
 */
 
-function Theme() {
+export default function Theme() {
   const [theme, setTheme] = useState('light');
   const toDark = () => setTheme('dark');
   const toLight = () => setTheme('light');
@@ -29,6 +29,3 @@ function Theme() {
     </div>
   )
 }
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(<Theme />, rootElement);

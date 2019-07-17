@@ -14,7 +14,7 @@ function generateId () {
   return '_' + Math.random().toString(36).substr(2, 9);
 }
 
-function Todo () {
+export default function Todo () {
   const [todos, setTodos] = React.useState([]);
   const [input, setInput] = React.useState('');
 
@@ -49,6 +49,3 @@ function Todo () {
     </div>
   );
 }
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(<Todo />, rootElement);
